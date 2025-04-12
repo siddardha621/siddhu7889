@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+        <p id="quote">Ckick to generate Quotes</p>
+        <button onclick="generateQuote()">New Quote</button>
+      
+      <script>
+        const quotes = [
+          { quote: "The best way to get started is to quit talking and begin doing." },
+          { quote: "Life is what happens when you're busy making other plans." },
+          { quote: "The purpose of our lives is to be happy." },
+          { quote: "Success is not in what you have, but who you are." },
+          { quote: "Your time is limited, don't waste it living someone else's life." }
+        ];
+      
+        function generateQuote() {
+          const randomIndex = Math.floor(Math.random() * quotes.length);
+          const selectedQuote = quotes[randomIndex];
+          document.getElementById("quote").textContent = `"${selectedQuote.quote}"`;
+          
+        }
+      </script>
+      
+</body>
+</html>

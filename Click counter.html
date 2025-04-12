@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click Counter</title>
+</head>
+<body style="text-align: center";>
+
+  <h1>Click Counter</h1>
+  <p input id="counter"></p>
+  <p input id="resetCounter"></p>
+  
+    <button onclick="increment()">Click Me</button>
+    <button onclick="resetCounter()">Reset</button>
+
+  <script>
+    let count=0;
+    
+
+    function increment() {
+    
+      count++;
+      document.getElementById('counter').innerText = count;
+    }
+
+    function resetCounter() {
+      count = 0;
+      document.getElementById('counter').innerText = count;
+    }
+  </script>
+
+</body>
+</html>
